@@ -31,7 +31,7 @@ const startServer = async () => {
     await Attendance.sync();
     await Salary.sync();
 
-    app.listen(process.env.PORT || 3006, () => {
+    app.listen(process.env.PORT || 3000, () => {
       console.log("Server started on port", process.env.PORT || 3006);
     });
   } catch (err) {
