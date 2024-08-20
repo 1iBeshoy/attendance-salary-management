@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary List</title>
+    <link href="/css/salary.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../partials/navbar.ejs'); %>
+
+    <div class="container">
+        <div class="header">
+            <h1>Employee Salary List</h1>
+            <div class="salary-form">
+                <label for="weekStart">Week Start:</label>
+                <input type="date" id="weekStart">
+                <label for="weekEnd">Week End:</label>
+                <input type="date" id="weekEnd">
+                <button id="addSalaryButton">Add Salary</button>
+            </div>
+        </div>    
+        <table>
+            <thead>
+                <tr>
+                    <th>Week Start</th>
+                    <th>Week End</th>
+                    <th>Deduction</th>
+                    <th>Bonus</th>
+                    <th>Salary</th>
+                    <th>Final Salary</th>
+                </tr>
+            </thead>
+            <tbody id="salaryTableBody">
+                <!-- Table rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <option id="<%- code %>" class="code"></option>
+    <script src="/js/salary.js"></script>
+</body>
+</html>

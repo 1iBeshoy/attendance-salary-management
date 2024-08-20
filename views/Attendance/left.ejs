@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee left</title>
+    <script src="/js/tailwind.js"></script>
+</head>
+<body>
+    <%- include('../partials/navbar.ejs'); %>
+
+    <div class="flex items-center justify-center h-full p-6">
+        <form action="/api/attendance/left/<%- code %>" method="post" class="w-full max-w-lg bg-white border border-gray-200 rounded-lg shadow-md p-8">
+            <h2 class="mb-6 text-2xl font-bold text-gray-900">Employee Left Attend</h2>
+            
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="leftTime">Left Time</label>
+                <input type="datetime-local" id="leftTime" name="leftTime" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+    
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="shiftEnd">Shift End Time</label>
+                <input type="time" id="shiftEnd" name="shiftEnd" required value="<%- shiftEndTime %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+
+    
+            <div class="flex items-center justify-between">
+                <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <option id="<%- code %>" class="code"></option>
+    <script src="/js/utils.js"></script>
+    <script src="/js/formHandler.js"></script>
+    <script src="/js/attendance.js"></script>
+</body>
+</html>

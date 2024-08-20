@@ -1,0 +1,27 @@
+.navbar {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 3px 0px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-home-button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-home-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attendance List</title>
+    <link href="/css/attendance.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../partials/navbar.ejs'); %>
+
+    <div class="container">
+        <div class="header">
+            <h1>Employee Attendance List</h1>
+            <div class="filters">
+                <label for="fromDate">From:</label>
+                <input type="date" id="fromDate">
+                <label for="toDate">To:</label>
+                <input type="date" id="toDate">
+                <button id="filterButton">Filter</button>
+            </div>
+        </div>    
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Arrived At</th>
+                    <th>Left At</th>
+                    <th>Shift Start Time</th>
+                    <th>Shift End Time</th>
+                    <th>Hours Worked</th>
+                    <th>Deduction</th>
+                    <th>Bonus</th>
+                    <th>Salary per Hour</th>
+                    <th>Final Salary</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceTableBody">
+                <!-- Table rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <option id="<%- code %>" class="code"></option>
+    <script src="/js/utils.js"></script>
+    <script src="/js/attendance.js"></script>
+</body>
+</html>
