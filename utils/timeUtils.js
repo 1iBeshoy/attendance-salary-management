@@ -27,7 +27,6 @@ function convertTo12Hour(time) {
   const [hour, minute] = time.split(':');
   let period = 'AM';
   let hour12 = parseInt(hour, 10);
-  console.log(hour, hour12)
 
   if (hour12 >= 12) {
       period = 'PM';

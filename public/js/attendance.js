@@ -112,13 +112,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   const updateRow = (updatedData) => {
-    console.log(updatedData)
     const row = [...tableBody.children].find((row) => row.children[0].innerHTML === updatedData.data.day);
-  
-    console.log([...tableBody.children])
-    console.log(tableBody.children)
-    console.log(tableBody.children[0].innerHTML)
-    console.log(row)
 
     if (row) {
       row.children[1].textContent = convertTo12Hour(updatedData.data.arrivedAt.split('T')[1]);

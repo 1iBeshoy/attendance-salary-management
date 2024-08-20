@@ -49,8 +49,6 @@ SalaryRoute.post('/', async (req, res) => {
 
         const finalSalary = totalSalary - totalDeduction + totalBonus;
 
-        console.log(totalHours, totalDeduction, totalBonus, totalSalary, finalSalary)
-
         const newSalary = await Salary.create({
             empCode,
             weekStart,
